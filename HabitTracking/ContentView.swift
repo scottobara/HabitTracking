@@ -9,10 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
-}
+        TabView {
+//            Color.orange.tabItem {
+//                Image(systemName: "goforward.plus")
+//                Text("Home") // Text("Track")
+//            }
+            HabitsView().tabItem {
+                Image(systemName: "list.bullet")
+                Text("Habits")
+            }
+            Color.red.tabItem {
+                Image(systemName: "gearshape")
+                Text("Settings")
+            }
+        }
+        //.edgesIgnoringSafeArea(.top)
+    }}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
